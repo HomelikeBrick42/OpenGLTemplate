@@ -36,4 +36,6 @@ void Application::Run()
 		Update(delta);
 		glfwSwapBuffers(m_WindowHandle);
 	}
+
+	Shutdown();
 }
