@@ -23,6 +23,9 @@ void Application::Run()
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		Log::Fatal("Unable to initalize GLAD!");
 
+	Log::Info("OpenGL Renderer: {0}, {1}", glGetString(GL_VENDOR), glGetString(GL_RENDERER));
+	Log::Info("OpenGL Version: {0}", glGetString(GL_VERSION));
+
 	Init();
 
 	float delta = 0.0f, lastFrame = (float)glfwGetTime(), time = 0.0f;
